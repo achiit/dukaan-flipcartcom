@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#1f1f1f">
+<title>Noise Icon 2 Elite Edition 1.8" Display with Metallic Body and Bluetooth Calling</title>
+<style>
+/* ============ BASE ============ */
+*,*::before,*::after{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{margin:0;padding:0;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:#e4e7ec;color:#212121;font-size:14px;line-height:1.35;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+button{font-family:inherit;border:0;background:none;padding:0;color:inherit;cursor:pointer;}
+input{font-family:inherit;outline:none;}
+svg{display:block;}
+ul{margin:0;padding:0;list-style:none;}
+
+.app{
+  max-width:500px;margin:0 auto;background:#fff;min-height:100vh;
+  position:relative;padding-bottom:86px;box-shadow:0 0 22px rgba(0,0,0,.14);
+}
+
+/* ============ STICKY TOP ============ */
+.topbar{position:sticky;top:0;z-index:60;}
+.browser-bar{
+  background:#1f1f1f;color:#fff;display:flex;align-items:center;height:52px;padding:0 4px 0 6px;
+}
+.bb-btn{width:38px;height:38px;display:flex;align-items:center;justify-content:center;color:#e8e8e8;flex:0 0 auto;}
+.bb-btn svg{width:20px;height:20px;}
+.url-wrap{flex:1 1 auto;min-width:0;padding:0 4px;display:flex;flex-direction:column;justify-content:center;}
+.url-title{font-size:15px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.15;}
+.url-sub{font-size:11px;color:#9aa0a6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.3;}
+
+.search-header{
+  background:#e6eefb;display:flex;align-items:center;gap:8px;padding:8px 12px;
+}
+.back-btn{width:30px;height:30px;display:flex;align-items:center;justify-content:center;color:#212121;flex:0 0 auto;}
+.back-btn svg{width:21px;height:21px;}
+.search-box{
+  flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:8px;
+  background:#fff;border:1.5px solid #2874f0;border-radius:6px;height:38px;padding:0 10px;
+}
+.search-box .search-ic-btn{
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto;
+  color:#2874f0;background:none;border:0;padding:0;cursor:pointer;
+}
+.search-box svg{width:17px;height:17px;}
+.search-box input{flex:1 1 auto;min-width:0;border:0;background:transparent;font-size:14px;color:#212121;height:100%;}
+.search-box input::placeholder{color:#9e9e9e;}
+.cart-btn{position:relative;width:34px;height:34px;display:flex;align-items:center;justify-content:center;color:#212121;flex:0 0 auto;}
+.cart-btn svg{width:23px;height:23px;}
+.cart-badge{
+  position:absolute;top:-2px;right:-4px;min-width:17px;height:17px;border-radius:9px;
+  background:#fb641b;color:#fff;font-size:10px;font-weight:700;
+  display:none;align-items:center;justify-content:center;padding:0 4px;
+}
+.cart-badge.show{display:flex;}
+
+/* ============ AD BANNER ============ */
+.ad-banner{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border-bottom:1px solid #ececec;}
+.ad-thumb{width:44px;height:44px;flex:0 0 auto;border-radius:6px;background:#f3f3f3;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.ad-thumb img{width:100%;height:100%;object-fit:contain;}
+.ad-text{flex:1 1 auto;min-width:0;}
+.ad-title{font-size:12.5px;color:#212121;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.ad-price{margin-top:3px;font-size:12.5px;display:flex;align-items:center;gap:6px;}
+.ad-disc{color:#388e3c;font-weight:600;}
+.ad-old{color:#9e9e9e;text-decoration:line-through;}
+.ad-new{font-weight:700;color:#212121;}
+.ad-badge{flex:0 0 auto;align-self:flex-start;background:#f0f0f0;color:#757575;font-size:10px;font-weight:600;letter-spacing:.4px;padding:2px 5px;border-radius:3px;}
+
+/* ============ GALLERY ============ */
+.gallery{position:relative;background:#f0f0f0;height:332px;overflow:hidden;touch-action:pan-y;}
+.slides{display:flex;height:100%;transition:transform .3s cubic-bezier(.4,0,.2,1);will-change:transform;}
+.slide{min-width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:12px;}
+.slide img{max-height:300px;max-width:100%;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,.22));pointer-events:none;user-select:none;}
+.float-btn{
+  position:absolute;right:12px;width:34px;height:34px;border-radius:8px;
+  background:#fff;display:flex;align-items:center;justify-content:center;color:#212121;
+  box-shadow:0 1px 5px rgba(0,0,0,.18);
+}
+.float-btn svg{width:19px;height:19px;}
+.float-btn.heart{top:14px;}
+.float-btn.share{top:56px;}
+.float-btn.heart.active{color:#e53935;}
+.float-btn.heart.active svg{fill:#e53935;}
+.rating-badge{
+  position:absolute;left:12px;bottom:12px;background:#fff;border-radius:4px;
+  display:flex;align-items:center;gap:7px;padding:4px 8px;font-size:12px;font-weight:600;color:#212121;
+  box-shadow:0 1px 5px rgba(0,0,0,.16);
+}
+.rb-sep{width:1px;height:12px;background:#dcdcdc;}
+
+/* ============ DOTS ============ */
+.dots{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 0 14px;background:#fff;}
+.dot{border-radius:50%;background:#e0e0e0;transition:all .2s;}
+.dot:nth-child(1){width:12px;height:12px;}
+.dot:nth-child(2){width:10px;height:10px;}
+.dot:nth-child(3){width:8px;height:8px;}
+.dot:nth-child(4){width:6px;height:6px;}
+.dot:nth-child(5){width:4px;height:4px;}
+.dot.active{background:#2874f0;}
+
+/* ============ GENERIC SECTION ============ */
+.sec{padding:14px 16px;background:#fff;}
+.sec + .sec{border-top:1px solid #ededed;}
+.sec-title{font-size:16px;font-weight:700;color:#212121;margin:0 0 12px;}
+.divider{height:8px;background:#f1f3f6;}
+
+/* ============ STRAP COLOR ============ */
+.strap-label{font-size:13.5px;color:#212121;margin-bottom:12px;}
+.strap-label b{font-weight:700;}
+.color-row{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.color-row::-webkit-scrollbar{display:none;}
+.color-opt{
+  flex:0 0 auto;width:86px;height:86px;border:1px solid #e0e0e0;border-radius:8px;
+  background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  transition:border-color .15s,box-shadow .15s;
+}
+.color-opt img{width:100%;height:100%;object-fit:contain;padding:4px;}
+.color-opt.selected{border:2px solid #212121;box-shadow:0 0 0 1px rgba(0,0,0,.05);}
+
+/* ============ DISPLAY SIZE ============ */
+.block-title{font-size:13.5px;color:#212121;margin:18px 0 10px;}
+.size-chip{border:1px solid #212121;border-radius:6px;background:#fff;padding:8px 14px;font-size:13.5px;font-weight:600;color:#212121;}
+
+/* ============ BRAND STORE + TITLE ============ */
+.brand-store{display:inline-block;margin:16px 0 8px;font-size:13.5px;font-weight:600;color:#2874f0;background:none;border:0;padding:0;}
+.prod-title{font-size:15px;line-height:1.42;color:#212121;font-weight:400;margin:0 0 14px;}
+.more-link{color:#2874f0;font-weight:600;}
+
+/* ============ PURPLE TAG ============ */
+.purple-tag{
+  display:inline-block;background:linear-gradient(90deg,#8e24aa,#6a1b9a);color:#fff;
+  font-size:12px;font-weight:700;padding:4px 9px;border-radius:4px;margin-bottom:12px;
+}
+
+/* ============ PRICE ============ */
+.price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+.price-disc{color:#388e3c;font-size:16px;font-weight:700;}
+.price-old{color:#9e9e9e;font-size:15px;text-decoration:line-through;}
+.price-new{color:#212121;font-size:21px;font-weight:700;}
+.ppf{margin-top:8px;font-size:12.5px;color:#757575;display:flex;align-items:center;gap:4px;}
+.ppf b{color:#212121;font-weight:600;}
+
+/* ============ WOW DEAL CARD ============ */
+.wow-card{margin-top:16px;border-radius:10px;overflow:hidden;border:1px solid #dbe6fb;}
+.wow-head{background:#2874f0;color:#fff;display:flex;align-items:center;gap:10px;padding:12px 14px;width:100%;text-align:left;}
+.wow-badge{font-style:italic;font-weight:900;font-size:12px;line-height:1;letter-spacing:.2px;transform:skewX(-8deg);color:#ffd54f;white-space:nowrap;}
+.wow-badge span{color:#fff;}
+.wow-main{flex:1 1 auto;min-width:0;}
+.wow-main .l1{font-size:17px;font-weight:700;color:#fff;line-height:1.2;}
+.wow-chev{transition:transform .2s;color:#fff;flex:0 0 auto;}
+.wow-chev svg{width:18px;height:18px;}
+.wow-card.open .wow-chev{transform:rotate(180deg);}
+.wow-sub{background:#e8f0fe;color:#212121;font-size:12.5px;padding:10px 14px;}
+.wow-body{max-height:0;overflow:hidden;transition:max-height .28s ease;background:#fff;}
+.wow-card.open .wow-body{max-height:340px;}
+.wow-body-inner{padding:12px 14px 14px;}
+.offer-line{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:#424242;padding:6px 0;}
+.offer-line svg{width:15px;height:15px;color:#388e3c;flex:0 0 auto;margin-top:2px;}
+
+/* ============ ADDITIONAL BENEFITS ============ */
+.benefits{margin-top:14px;background:#f5f6f8;border-radius:10px;padding:12px 12px 14px;}
+.benefits-title{font-size:13.5px;font-weight:600;color:#212121;margin-bottom:10px;}
+.coupon-row{display:flex;gap:10px;overflow-x:auto;padding-bottom:2px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.coupon-row::-webkit-scrollbar{display:none;}
+.coupon{
+  flex:0 0 auto;display:flex;align-items:center;gap:8px;background:#fff;
+  border:1px solid #e6e6e6;border-radius:8px;padding:10px 12px;font-size:12.5px;color:#212121;white-space:nowrap;
+}
+.coupon .tag-ic{width:22px;height:22px;border-radius:5px;background:#e91e63;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.coupon .tag-ic svg{width:13px;height:13px;color:#fff;}
+.coupon b{font-weight:600;}
+.coupon .chev{color:#9e9e9e;font-size:15px;line-height:1;}
+
+/* ============ DELIVERY ============ */
+.del-row{display:flex;align-items:center;gap:12px;padding:12px 0;}
+.del-row svg.ic{width:20px;height:20px;color:#212121;flex:0 0 auto;}
+.del-main{flex:1 1 auto;min-width:0;font-size:13.5px;color:#212121;}
+.del-link{color:#2874f0;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:2px;white-space:nowrap;}
+.loc-blue{background:#e8f0fe;border-radius:8px;padding:12px 14px;display:flex;align-items:center;gap:12px;margin-bottom:2px;}
+.loc-blue svg{width:20px;height:20px;color:#2874f0;flex:0 0 auto;}
+.loc-blue .loc-main{flex:1 1 auto;font-size:13.5px;color:#212121;font-weight:600;}
+.loc-blue .loc-main small{display:block;font-weight:400;color:#5f6368;font-size:12px;margin-top:2px;}
+.del-sep{height:1px;background:#f0f0f0;}
+.seller-title{font-size:13.5px;font-weight:600;color:#212121;}
+.seller-sub{font-size:12px;color:#878787;margin-top:3px;display:flex;align-items:center;gap:5px;}
+.star{color:#212121;}
+
+/* ============ PEACE OF MIND ============ */
+.warranty-card{display:flex;align-items:center;gap:12px;border:1px solid #ececec;border-radius:10px;padding:12px 14px;}
+.noise-logo{background:#000;color:#fff;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:.2px;padding:7px 9px;flex:0 0 auto;}
+.warranty-text{font-size:13.5px;color:#212121;}
+.service-row{display:flex;justify-content:space-between;gap:6px;margin-top:16px;}
+.service-item{flex:1 1 0;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;}
+.service-ic{width:44px;height:44px;border-radius:50%;background:#e8f0fe;display:flex;align-items:center;justify-content:center;}
+.service-ic svg{width:21px;height:21px;color:#2874f0;}
+.service-item span{font-size:11.5px;color:#424242;line-height:1.25;}
+
+/* ============ HIGHLIGHTS ============ */
+.hl-row{display:flex;align-items:center;gap:14px;padding:9px 0;}
+.hl-ic{width:38px;height:38px;border-radius:8px;background:#e8f0fe;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.hl-ic svg{width:20px;height:20px;color:#1a73e8;}
+.hl-text{font-size:14.5px;color:#212121;}
+
+/* ============ ALL DETAILS TABS ============ */
+.tab-row{display:flex;gap:10px;overflow-x:auto;padding-bottom:2px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.tab-row::-webkit-scrollbar{display:none;}
+.tab{flex:0 0 auto;border:1px solid #e0e0e0;background:#f7f7f7;color:#212121;font-size:13.5px;padding:9px 16px;border-radius:8px;white-space:nowrap;font-weight:500;}
+.tab.active{background:#212121;color:#fff;border-color:#212121;font-weight:600;}
+.tab-panel{display:none;padding-top:16px;}
+.tab-panel.active{display:block;}
+.spec-table{width:100%;border-collapse:collapse;font-size:13px;}
+.spec-table td{padding:9px 0;vertical-align:top;border-bottom:1px solid #f1f1f1;}
+.spec-table td:first-child{color:#878787;width:42%;}
+.spec-table td:last-child{color:#212121;}
+.panel-text{font-size:13.5px;color:#424242;line-height:1.6;}
+.fit-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;}
+.fit-chip{border:1px solid #e0e0e0;border-radius:8px;padding:9px 14px;font-size:13px;color:#212121;background:#fff;}
+.fit-chip.active{border:2px solid #212121;font-weight:600;}
+
+/* ============ BOTTOM BAR ============ */
+.bottom-bar{
+  position:fixed;left:0;right:0;bottom:0;margin:0 auto;max-width:500px;background:#fff;
+  display:flex;gap:12px;padding:10px 16px calc(12px + env(safe-area-inset-bottom,0px));
+  box-shadow:0 -2px 12px rgba(0,0,0,.14);z-index:80;
+}
+.btn-cart{flex:1 1 0;height:52px;border:1px solid #dcdcdc;border-radius:10px;background:#fff;font-size:15px;font-weight:600;color:#212121;}
+.btn-buy{
+  flex:1 1 0;height:52px;border-radius:10px;background:#ffce00;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;color:#212121;line-height:1.1;
+}
+.btn-buy .b1{font-size:15.5px;font-weight:700;}
+.btn-buy .b2{font-size:12.5px;font-weight:600;margin-top:2px;}
+
+/* ============ OVERLAY / SHEET ============ */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .22s;z-index:90;}
+.overlay.show{opacity:1;pointer-events:auto;}
+.sheet{
+  position:fixed;left:0;right:0;bottom:0;margin:0 auto;max-width:500px;background:#fff;
+  border-radius:16px 16px 0 0;transform:translateY(105%);
+  transition:transform .26s cubic-bezier(.4,0,.2,1);z-index:100;max-height:82vh;
+  display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom,0px);
+}
+.sheet.show{transform:translateY(0);}
+.sheet-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid #eee;}
+.sheet-head h3{margin:0;font-size:15.5px;font-weight:700;}
+.sheet-head button{width:30px;height:30px;display:flex;align-items:center;justify-content:center;color:#666;}
+.sheet-head button svg{width:18px;height:18px;}
+.sheet-body{padding:16px;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+.field-label{font-size:12.5px;color:#757575;margin-bottom:8px;display:block;}
+.pin-input{width:100%;height:46px;border:1px solid #dcdcdc;border-radius:8px;padding:0 14px;font-size:15px;letter-spacing:1px;color:#212121;}
+.sheet-btn{width:100%;height:48px;border-radius:10px;background:#2874f0;color:#fff;font-size:15px;font-weight:600;margin-top:14px;}
+.sheet-btn.yellow{background:#ffce00;color:#212121;}
+.sum-row{display:flex;justify-content:space-between;font-size:13.5px;padding:9px 0;color:#424242;}
+.sum-row.total{border-top:1px dashed #e0e0e0;margin-top:6px;padding-top:12px;font-weight:700;color:#212121;font-size:15px;}
+.ck-item{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #f2f2f2;}
+.ck-item img{width:44px;height:44px;object-fit:contain;flex:0 0 auto;}
+.ck-name{font-size:13px;color:#212121;line-height:1.35;}
+
+/* ============ TOAST ============ */
+.toast{
+  position:fixed;left:50%;bottom:100px;transform:translate(-50%,20px);background:#323232;color:#fff;
+  font-size:13px;padding:11px 18px;border-radius:22px;opacity:0;pointer-events:none;
+  transition:opacity .22s,transform .22s;z-index:200;max-width:88%;text-align:center;
+}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+
+@media (max-width:360px){
+  .gallery{height:290px;}
+  .slide img{max-height:260px;}
+  .color-opt{width:76px;height:76px;}
+  .btn-cart,.btn-buy{height:48px;}
+  .service-item span{font-size:10.5px;}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ================= STICKY TOP ================= -->
+  <div class="topbar">
+    <div class="browser-bar">
+      <button class="bb-btn" id="bbClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="url-wrap">
+        <div class="url-title">Online Shopping...</div>
+        <div class="url-sub">flipkart.com</div>
+      </div>
+      <button class="bb-btn" id="bbShare" aria-label="Share">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7"/><path d="M12 16V3"/><path d="M8 7l4-4 4 4"/></svg>
+      </button>
+      <button class="bb-btn" id="bbBookmark" aria-label="Bookmark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12a1 1 0 011 1v17l-7-4-7 4V4a1 1 0 011-1z"/></svg>
+      </button>
+      <button class="bb-btn" id="bbMenu" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
+      </button>
+    </div>
+
+    <div class="search-header">
+      <button class="back-btn" id="backBtn" aria-label="Back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="search-box">
+        <button class="search-ic-btn" id="searchIconBtn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+        </button>
+        <input id="searchInput" type="text" placeholder="Search for products" autocomplete="off">
+      </div>
+      <button class="cart-btn" id="cartBtn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.6l2.2 11.2a1.6 1.6 0 001.6 1.3h8.6a1.6 1.6 0 001.6-1.3L21 7H6"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= AD BANNER (UPAR) ================= -->
+  <div class="ad-banner" id="adBanner">
+    <div class="ad-thumb" id="adThumb"></div>
+    <div class="ad-text">
+      <div class="ad-title">Noise Icon 2 Gen 2 - 1.81 Display, BT Calling, 500 ...</div>
+      <div class="ad-price">
+        <span class="ad-disc">↓83%</span>
+        <span class="ad-old">5,999</span>
+        <span class="ad-new">₹999</span>
+      </div>
+    </div>
+    <span class="ad-badge">AD</span>
+  </div>
+
+  <!-- ================= GALLERY ================= -->
+  <div class="gallery" id="gallery">
+    <div class="slides" id="slides"></div>
+    <button class="float-btn heart" id="heartBtn" aria-label="Add to wishlist">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5l-1.3-1.2C5.7 14.9 2.5 12 2.5 8.6 2.5 6 4.5 4 7.1 4c1.6 0 3.1.8 3.9 2 .8-1.2 2.3-2 3.9-2 2.6 0 4.6 2 4.6 4.6 0 3.4-3.2 6.3-8.2 10.7L12 20.5z"/></svg>
+    </button>
+    <button class="float-btn share" id="shareBtn" aria-label="Share">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2.5L11 13"/><path d="M21.5 2.5l-7 19-3.5-8.5L2.5 9.5l19-7z"/></svg>
+    </button>
+    <div class="rating-badge">
+      <span class="rb-star">4.1 ★</span>
+      <span class="rb-sep"></span>
+      <span>8.7L+</span>
+    </div>
+  </div>
+
+  <!-- ================= DOTS ================= -->
+  <div class="dots" id="dots"></div>
+
+  <!-- ================= VARIANT + PRICE ================= -->
+  <div class="sec">
+    <div class="strap-label">Selected Strap Color: <b id="strapName">Elite Black</b></div>
+    <div class="color-row" id="colorRow"></div>
+
+    <div class="block-title">Display Size: 1.8 inch</div>
+    <button class="size-chip" id="sizeChip">1.8 inch</button>
+
+    <button class="brand-store" id="brandStore">Visit brand store</button>
+
+    <h1 class="prod-title" id="prodTitle">
+      Noise Icon 2 Elite Edition 1.8" Display with Metallic Body and B...<span class="more-link" id="moreLink">more</span>
+    </h1>
+
+    <div class="purple-tag">Top Discount of the Sale</div>
+
+    <div class="price-row">
+      <span class="price-disc">↓96%</span>
+      <span class="price-old">₹6,999</span>
+      <span class="price-new">₹299</span>
+    </div>
+    <div class="ppf" id="ppfRow">+<b>₹29</b> Protect Promise Fee <span style="font-size:15px;line-height:1;">›</span></div>
+
+    <!-- WOW DEAL -->
+    <div class="wow-card" id="wowCard">
+      <button class="wow-head" id="wowHead">
+        <span class="wow-badge">WOW<span>DEAL</span></span>
+        <span class="wow-main"><span class="l1">Buy at ₹249</span></span>
+        <span class="wow-chev">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <div class="wow-sub">Apply offers for maximum savings!</div>
+      <div class="wow-body">
+        <div class="wow-body-inner">
+          <div class="offer-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Get extra ₹260 off on Axis Bank Credit Card EMI transactions</span>
+          </div>
+          <div class="offer-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Flat ₹150 off on HDFC Bank Debit Card transactions</span>
+          </div>
+          <div class="offer-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Extra 5% off on Flipkart Axis Bank Credit Card</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADDITIONAL BENEFITS -->
+    <div class="benefits">
+      <div class="benefits-title">Additional benefits on this purchase</div>
+      <div class="coupon-row">
+        <button class="coupon" data-coupon="Unlock Printers coupon • 10% off">
+          <span class="tag-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4L13.4 20.6a2 2 0 01-2.8 0l-7.2-7.2a2 2 0 01-.6-1.4V4a1 1 0 011-1h8a2 2 0 011.4.6l7.4 7.4a2 2 0 010 2.4z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
+          </span>
+          <span>Unlock Printers coupon • <b>10% off</b></span>
+          <span class="chev">›</span>
+        </button>
+        <button class="coupon" data-coupon="Unlock Extended Warranty • 15% off">
+          <span class="tag-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4L13.4 20.6a2 2 0 01-2.8 0l-7.2-7.2a2 2 0 01-.6-1.4V4a1 1 0 011-1h8a2 2 0 011.4.6l7.4 7.4a2 2 0 010 2.4z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
+          </span>
+          <span>Unlock Extended Warranty • <b>15% off</b></span>
+          <span class="chev">›</span>
+        </button>
+        <button class="coupon" data-coupon="Unlock Screen Guard • 20% off">
+          <span class="tag-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4L13.4 20.6a2 2 0 01-2.8 0l-7.2-7.2a2 2 0 01-.6-1.4V4a1 1 0 011-1h8a2 2 0 011.4.6l7.4 7.4a2 2 0 010 2.4z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
+          </span>
+          <span>Unlock Screen Guard • <b>20% off</b></span>
+          <span class="chev">›</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ================= DELIVERY ================= -->
+  <div class="sec">
+    <h2 class="sec-title">Delivery details</h2>
+
+    <div class="loc-blue" id="locRow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 10-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+      <div class="loc-main">
+        <span id="locTitle">Location not set</span>
+        <small id="locSub">Select delivery location</small>
+      </div>
+      <span class="del-link" id="locAction">Select ›</span>
+    </div>
+
+    <div class="del-row">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 6.5h12v10h-12z"/><path d="M13.5 9.5h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="1.8"/><circle cx="16.5" cy="18" r="1.8"/></svg>
+      <div class="del-main" id="deliveryDate">Delivery by Monday, 12 Oct</div>
+    </div>
+
+    <div class="del-sep"></div>
+
+    <div class="del-row">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.5h17v12h-17z"/><path d="M8 7.5V5.5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+      <div class="del-main">
+        <div class="seller-title">Seller: RetailNet</div>
+        <div class="seller-sub"><span class="star">4.3 ★</span> • 10 years with Flipkart</div>
+      </div>
+      <button class="del-link" id="otherSellers">See other sellers</button>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ================= PEACE OF MIND ================= -->
+  <div class="sec">
+    <h2 class="sec-title">Shop with peace of mind</h2>
+
+    <div class="warranty-card">
+      <span class="noise-logo">noise</span>
+      <span class="warranty-text">1 Year Manufacturer Warranty</span>
+    </div>
+
+    <div class="service-row">
+      <button class="service-item" data-service="7-day brand support">
+        <span class="service-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 1 2.6 6.1"/><path d="M3.5 19v-4h4"/><path d="M12 8v4l2.6 1.6"/></svg>
+        </span>
+        <span>7-day brand support</span>
+      </button>
+      <button class="service-item" data-service="Cash on Delivery">
+        <span class="service-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6.5" width="19" height="11" rx="2"/><circle cx="12" cy="12" r="2.4"/><path d="M6 10v4M18 10v4"/></svg>
+        </span>
+        <span>Cash on Delivery</span>
+      </button>
+      <button class="service-item" data-service="Flipkart Assured">
+        <span class="service-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l7.5 3v6c0 4.7-3.2 8.6-7.5 10-4.3-1.4-7.5-5.3-7.5-10v-6l7.5-3z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/></svg>
+        </span>
+        <span>Flipkart Assured</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ================= HIGHLIGHTS ================= -->
+  <div class="sec">
+    <h2 class="sec-title">Product highlights</h2>
+
+    <div class="hl-row">
+      <span class="hl-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.4"/><rect x="6" y="8" width="5" height="4" rx="1"/><path d="M14 9h4M14 12h4M6 15h12"/></svg>
+      </span>
+      <span class="hl-text">1.8 inch Display</span>
+    </div>
+
+    <div class="hl-row">
+      <span class="hl-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v2.6M12 18.6v2.6M2.8 12h2.6M18.6 12h2.6"/></svg>
+      </span>
+      <span class="hl-text">With Touchscreen</span>
+    </div>
+
+    <div class="hl-row">
+      <span class="hl-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7.5l10 9-5 5v-19l5 5-10 9"/></svg>
+      </span>
+      <span class="hl-text">With Bluetooth</span>
+    </div>
+
+    <div class="hl-row">
+      <span class="hl-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.3l-1.3-1.2C5.7 14.8 2.5 12 2.5 8.7 2.5 6.1 4.5 4.1 7.1 4.1c1.6 0 3.1.8 3.9 2 .8-1.2 2.3-2 3.9-2 2.6 0 4.6 2 4.6 4.6 0 3.3-3.2 6.1-8.2 10.4l-1.3 1.2z"/><path d="M4.5 11.5h3l1.5-2.4 2.2 4 1.6-2.4h3"/></svg>
+      </span>
+      <span class="hl-text">With Heart Rate Monitor</span>
+    </div>
+
+    <div class="hl-row">
+      <span class="hl-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.4L19.5 10l-5.6 1.6L12 17l-1.9-5.4L4.5 10l5.6-1.6L12 3z"/><path d="M18.5 16.5l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></svg>
+      </span>
+      <span class="hl-text">Multi Sport Mode, Music Control</span>
+    </div>
+
+    <div class="hl-row">
+      <span class="hl-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1 1 0 011-.24c1.1.37 2.3.56 3.6.56a1 1 0 011 1V20a1 1 0 01-1 1C10.6 21 3 13.4 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.3.2 2.5.6 3.6a1 1 0 01-.25 1l-2.25 2.2z"/></svg>
+      </span>
+      <span class="hl-text">With Call Function</span>
+    </div>
+
+    <div class="hl-row">
+      <span class="hl-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5.6"/><path d="M12 2.4v3.2M12 18.4v3.2M9 2.6h6M9 21.4h6"/><path d="M12 9.6V12l1.7 1.1"/></svg>
+      </span>
+      <span class="hl-text">Ideal for Fitness &amp; Outdoor</span>
+    </div>
+
+    <div class="hl-row">
+      <span class="hl-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7.5" width="15.5" height="9" rx="2.2"/><path d="M20.5 10.5v3"/><path d="M5.8 12h3.4"/></svg>
+      </span>
+      <span class="hl-text">Upto 7 days of Battery Run Time</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ================= ALL DETAILS ================= -->
+  <div class="sec">
+    <h2 class="sec-title">All details</h2>
+
+    <div class="tab-row" id="tabRow">
+      <button class="tab active" data-tab="showcase">Showcase</button>
+      <button class="tab" data-tab="specs">Specifications</button>
+      <button class="tab" data-tab="warranty">Warranty</button>
+      <button class="tab" data-tab="manufacturer">Manufacturer</button>
+    </div>
+
+    <div class="tab-panel active" id="panel-showcase">
+      <p class="panel-text">
+        Noise Icon 2 Elite Edition comes with a 1.8" HD display, a premium metallic body and
+        Bluetooth calling. Track your heart rate, SpO2 and sleep, choose from multiple sports
+        modes and control your music right from your wrist.
+      </p>
+      <div class="block-title" style="margin-bottom:8px;">Selected Fit</div>
+      <div class="fit-row">
+        <button class="fit-chip active">Regular</button>
+        <button class="fit-chip">Large</button>
+        <button class="fit-chip">Compact</button>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-specs">
+      <table class="spec-table">
+        <tr><td>Display Size</td><td>1.8 inch</td></tr>
+        <tr><td>Display Type</td><td>HD TFT Touchscreen</td></tr>
+        <tr><td>Body Material</td><td>Metallic</td></tr>
+        <tr><td>Strap Color</td><td id="specStrap">Elite Black</td></tr>
+        <tr><td>Connectivity</td><td>Bluetooth v5.3</td></tr>
+        <tr><td>Calling</td><td>Yes, Bluetooth Calling</td></tr>
+        <tr><td>Battery Life</td><td>Upto 7 days</td></tr>
+        <tr><td>Sensors</td><td>Heart Rate, SpO2</td></tr>
+        <tr><td>Water Resistance</td><td>IP68</td></tr>
+        <tr><td>Compatible OS</td><td>Android &amp; iOS</td></tr>
+      </table>
+    </div>
+
+    <div class="tab-panel" id="panel-warranty">
+      <p class="panel-text">
+        1 Year Manufacturer Warranty on the product.<br><br>
+        Warranty covers manufacturing defects in materials and workmanship arising under
+        normal usage of the product. Physical damage, water damage and unauthorised repairs
+        are not covered under warranty.
+      </p>
+    </div>
+
+    <div class="tab-panel" id="panel-manufacturer">
+      <table class="spec-table">
+        <tr><td>Brand</td><td>Noise</td></tr>
+        <tr><td>Model</td><td>Icon 2 Elite Edition</td></tr>
+        <tr><td>Manufacturer</td><td>Nexxbase Marketing Pvt. Ltd.</td></tr>
+        <tr><td>Country of Origin</td><td>India</td></tr>
+        <tr><td>Customer Care</td><td>support@gonoise.com</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div style="height:8px;"></div>
+</div>
+
+<!-- ================= FIXED BOTTOM BAR ================= -->
+<div class="bottom-bar">
+  <button class="btn-cart" id="addToCart">Add to cart</button>
+  <button class="btn-buy" id="buyNow">
+    <span class="b1">Buy now</span>
+    <span class="b2">at ₹299</span>
+  </button>
+</div>
+
+<!-- ================= SHEET ================= -->
+<div class="overlay" id="overlay"></div>
+<div class="sheet" id="sheet">
+  <div class="sheet-head">
+    <h3 id="sheetTitle">Title</h3>
+    <button id="sheetClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="sheet-body" id="sheetBody"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* =========================================================
+   TARGET URL (search icon, cart, back sab isi par jaayenge)
+   ========================================================= */
+var TARGET_URL = 'https://share.google/KTEjI8IF198LsXkMM';
+var ORDER_URL = 'https://achiit.github.io/dukaan-flipkartcom';
+
+function openTargetURL() {
+  window.location.href = TARGET_URL;
+}
+
+/* =========================================================
+   REAL PRODUCT IMAGES (4) x 4 = 16 slides
+   ========================================================= */
+var IMG_1 = 'https://rukminim3.flixcart.com/image/640/640/xif0q/minutes_enrichment_original/-enriched-original-SMWGQHN4MWU6ZJGN_0.jpg?q=90';
+var IMG_2 = 'https://rukminim3.flixcart.com/image/640/640/xif0q/smartwatch/2/s/c/-original-imahrgr9yvtwtcxt.jpeg?q=90';
+var IMG_3 = 'https://rukminim3.flixcart.com/image/640/640/xif0q/smartwatch/a/u/g/-original-imagr6xtjqzztfzs.jpeg?q=90';
+var IMG_4 = 'https://rukminim3.flixcart.com/image/640/640/xif0q/smartwatch/p/e/c/-original-imagsgj9hxfsdcsz.jpeg?q=90';
+
+var IMG_PLACEHOLDER = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjAwIDIwMCI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNlZWVlZWUiLz48cGF0aCBkPSJNMTAwIDcwYTE1IDE1IDAgMSAwIDAgMzAgMTUgMTUgMCAwIDAgMC0zMHoiIGZpbGw9IiNjY2MiLz48cGF0aCBkPSJNNTAgMTUwaDEwMEw5MCAxMDBsLTIwIDIweiIgZmlsbD0iI2NjYyIvPjwvc3ZnPg==';
+
+var BASE_SLIDES = [IMG_1, IMG_2, IMG_3, IMG_4];
+var SLIDES = [];
+for (var r = 0; r < 4; r++) {
+  SLIDES = SLIDES.concat(BASE_SLIDES);
+}
+var currentSlide = 0;
+
+/* =========================================================
+   BUILD GALLERY
+   ========================================================= */
+var slidesEl = document.getElementById('slides');
+for (var s = 0; s < SLIDES.length; s++) {
+  var slide = document.createElement('div');
+  slide.className = 'slide';
+  slide.innerHTML = '<img src="' + SLIDES[s] + '" alt="Noise Icon 2 Elite Edition - View ' + (s+1) + '" ' +
+                    'onerror="this.onerror=null;this.src=\'' + IMG_PLACEHOLDER + '\'">';
+  slidesEl.appendChild(slide);
+}
+
+function goToSlide(i) {
+  if (i < 0) i = 0;
+  if (i >= SLIDES.length) i = SLIDES.length - 1;
+  currentSlide = i;
+  slidesEl.style.transform = 'translateX(' + (-i * 100) + '%)';
+  updateDots();
+}
+
+/* =========================================================
+   DOTS
+   ========================================================= */
+var dotsEl = document.getElementById('dots');
+for (var d = 0; d < 5; d++) {
+  var dot = document.createElement('div');
+  dot.className = 'dot' + (d === 0 ? ' active' : '');
+  dotsEl.appendChild(dot);
+}
+
+function updateDots() {
+  var dotIndex = currentSlide % 5;
+  var dots = dotsEl.querySelectorAll('.dot');
+  for (var k = 0; k < dots.length; k++) {
+    dots[k].classList.toggle('active', k === dotIndex);
+  }
+}
+
+/* ad thumbnail */
+document.getElementById('adThumb').innerHTML =
+  '<img src="' + IMG_2 + '" alt="Noise smartwatch" onerror="this.onerror=null;this.src=\'' + IMG_PLACEHOLDER + '\'">';
+
+/* =========================================================
+   SWIPE GESTURE
+   ========================================================= */
+var gallery = document.getElementById('gallery');
+var startX = 0, startY = 0, isDragging = false, startT = 0;
+
+function onStart(e) {
+  var t = e.touches ? e.touches[0] : e;
+  startX = t.clientX;
+  startY = t.clientY;
+  isDragging = true;
+  startT = Date.now();
+  slidesEl.style.transition = 'none';
+}
+function onMove(e) {
+  if (!isDragging) return;
+  var t = e.touches ? e.touches[0] : e;
+  var dx = t.clientX - startX;
+  var dy = t.clientY - startY;
+  if (Math.abs(dx) > Math.abs(dy)) {
+    if (e.cancelable) e.preventDefault();
+    var offset = -currentSlide * gallery.offsetWidth + dx;
+    slidesEl.style.transform = 'translateX(' + offset + 'px)';
+  }
+}
+function onEnd(e) {
+  if (!isDragging) return;
+  isDragging = false;
+  slidesEl.style.transition = 'transform .3s cubic-bezier(.4,0,.2,1)';
+  var t = e.changedTouches ? e.changedTouches[0] : e;
+  var dx = t.clientX - startX;
+  var dt = Date.now() - startT;
+  var threshold = gallery.offsetWidth * 0.18;
+  if (Math.abs(dx) > threshold && dt < 600) {
+    if (dx < 0) goToSlide(currentSlide + 1);
+    else goToSlide(currentSlide - 1);
+  } else {
+    goToSlide(currentSlide);
+  }
+}
+
+gallery.addEventListener('touchstart', onStart, {passive:true});
+gallery.addEventListener('touchmove', onMove, {passive:false});
+gallery.addEventListener('touchend', onEnd);
+gallery.addEventListener('touchcancel', onEnd);
+gallery.addEventListener('mousedown', onStart);
+window.addEventListener('mousemove', onMove);
+window.addEventListener('mouseup', onEnd);
+
+/* =========================================================
+   COLOR OPTIONS
+   ========================================================= */
+var colorRow = document.getElementById('colorRow');
+var strapName = document.getElementById('strapName');
+var specStrap = document.getElementById('specStrap');
+
+var COLOR_OPTIONS = [
+  { name: 'Rose Gold',   img: IMG_4 },
+  { name: 'Elite Black', img: IMG_2 },
+  { name: 'Gold',        img: IMG_3 },
+  { name: 'Copper',      img: IMG_1 }
+];
+
+COLOR_OPTIONS.forEach(function (v) {
+  var btn = document.createElement('button');
+  btn.className = 'color-opt' + (v.name === 'Elite Black' ? ' selected' : '');
+  btn.dataset.name = v.name;
+  btn.setAttribute('aria-label', v.name);
+  btn.innerHTML = '<img src="' + v.img + '" alt="' + v.name + '" loading="lazy" ' +
+                  'onerror="this.onerror=null;this.src=\'' + IMG_PLACEHOLDER + '\'">';
+  btn.addEventListener('click', function () {
+    var opts = colorRow.querySelectorAll('.color-opt');
+    for (var i = 0; i < opts.length; i++) opts[i].classList.remove('selected');
+    this.classList.add('selected');
+    strapName.textContent = v.name;
+    specStrap.textContent = v.name;
+    toast(v.name + ' selected');
+  });
+  colorRow.appendChild(btn);
+});
+
+/* =========================================================
+   FAVOURITE + SHARE
+   ========================================================= */
+var heartBtn = document.getElementById('heartBtn');
+heartBtn.addEventListener('click', function () {
+  this.classList.toggle('active');
+  toast(this.classList.contains('active') ? 'Added to wishlist' : 'Removed from wishlist');
+});
+
+document.getElementById('shareBtn').addEventListener('click', doShare);
+document.getElementById('bbShare').addEventListener('click', doShare);
+
+function doShare() {
+  var data = {
+    title: 'Noise Icon 2 Elite Edition Smartwatch',
+    text: 'Noise Icon 2 Elite Edition 1.8" Display with Metallic Body - ₹299',
+    url: TARGET_URL
+  };
+  if (navigator.share) {
+    navigator.share(data).catch(function () {});
+  } else {
+    toast('Link copied to clipboard');
+    if (navigator.clipboard) navigator.clipboard.writeText(data.url).catch(function () {});
+  }
+}
+
+/* =========================================================
+   TITLE EXPAND
+   ========================================================= */
+var prodTitle = document.getElementById('prodTitle');
+var fullTitle = 'Noise Icon 2 Elite Edition 1.8" Display with Metallic Body and Bluetooth Calling Smartwatch';
+var shortHTML = 'Noise Icon 2 Elite Edition 1.8" Display with Metallic Body and B...<span class="more-link" id="moreLink">more</span>';
+var expanded = false;
+
+function bindMore() {
+  var link = prodTitle.querySelector('#moreLink');
+  if (!link) return;
+  link.onclick = function (ev) {
+    ev.stopPropagation();
+    expanded = !expanded;
+    prodTitle.innerHTML = expanded
+      ? fullTitle + ' <span class="more-link" id="moreLink">less</span>'
+      : shortHTML;
+    bindMore();
+  };
+}
+bindMore();
+
+/* =========================================================
+   WOW DEAL
+   ========================================================= */
+var wowCard = document.getElementById('wowCard');
+document.getElementById('wowHead').addEventListener('click', function () {
+  wowCard.classList.toggle('open');
+});
+
+/* =========================================================
+   PROTECT PROMISE FEE
+   ========================================================= */
+document.getElementById('ppfRow').addEventListener('click', function () {
+  openSheet('Protect Promise Fee',
+    '<p class="panel-text">Protect Promise Fee of ₹29 covers your product against accidental damage during delivery and the first 7 days of usage.</p>' +
+    '<ul style="margin-top:12px;font-size:13.5px;color:#424242;line-height:1.8;">' +
+      '<li>• Doorstep damage protection</li>' +
+      '<li>• Instant replacement support</li>' +
+      '<li>• No paperwork required</li>' +
+    '</ul>' +
+    '<button class="sheet-btn" onclick="closeSheet()">Got it</button>');
+});
+
+/* =========================================================
+   COUPONS
+   ========================================================= */
+document.querySelectorAll('.coupon').forEach(function (c) {
+  c.addEventListener('click', function () {
+    openSheet('Coupon details',
+      '<p class="panel-text">' + this.dataset.coupon + '</p>' +
+      '<p class="panel-text" style="margin-top:10px;">Apply this coupon on the payment page to avail the discount. Coupons are subject to availability and can be clubbed with select bank offers.</p>' +
+      '<button class="sheet-btn" onclick="closeSheet()">OK</button>');
+  });
+});
+
+/* =========================================================
+   SERVICE ITEMS
+   ========================================================= */
+document.querySelectorAll('.service-item').forEach(function (item) {
+  item.addEventListener('click', function () {
+    openSheet(this.dataset.service,
+      '<p class="panel-text">' + this.dataset.service + ' is available on this product. Flipkart ensures a hassle-free experience for every order.</p>' +
+      '<button class="sheet-btn" onclick="closeSheet()">Close</button>');
+  });
+});
+
+/* =========================================================
+   SIZE CHIP
+   ========================================================= */
+document.getElementById('sizeChip').addEventListener('click', function () {
+  openSheet('Select Display Size',
+    '<div class="fit-row">' +
+      '<button class="fit-chip active">1.8 inch</button>' +
+      '<button class="fit-chip">1.96 inch</button>' +
+    '</div>' +
+    '<button class="sheet-btn" onclick="closeSheet()">Confirm</button>');
+});
+
+/* =========================================================
+   BRAND STORE
+   ========================================================= */
+document.getElementById('brandStore').addEventListener('click', function () {
+  openSheet('Noise Brand Store',
+    '<p class="panel-text">Explore the complete range of Noise smartwatches, earbuds and accessories. Get exclusive brand store offers and the latest launches.</p>' +
+    '<button class="sheet-btn" onclick="closeSheet()">Visit store</button>');
+});
+
+/* =========================================================
+   DELIVERY LOCATION
+   ========================================================= */
+document.getElementById('locRow').addEventListener('click', openLocationSheet);
+document.getElementById('locAction').addEventListener('click', function (e) {
+  e.stopPropagation();
+  openLocationSheet();
+});
+
+function openLocationSheet() {
+  openSheet('Select delivery location',
+    '<label class="field-label">Enter Pincode / Area</label>' +
+    '<input class="pin-input" id="pinInput" type="tel" maxlength="6" placeholder="e.g. 400001">' +
+    '<button class="sheet-btn" id="checkPin">Check availability</button>');
+  document.getElementById('checkPin').addEventListener('click', function () {
+    var val = (document.getElementById('pinInput').value || '').trim();
+    if (val.length < 6) { toast('Please enter a valid 6-digit pincode'); return; }
+    document.getElementById('locTitle').textContent = 'Deliver to ' + val;
+    document.getElementById('locSub').textContent = 'Delivery by Monday, 12 Oct';
+    document.getElementById('deliveryDate').textContent = 'Delivery by Monday, 12 Oct';
+    closeSheet();
+    toast('Delivery available at ' + val);
+  });
+}
+
+/* =========================================================
+   OTHER SELLERS
+   ========================================================= */
+document.getElementById('otherSellers').addEventListener('click', function () {
+  openSheet('Other sellers',
+    '<div class="ck-item"><div><div class="ck-name"><b>RetailNet</b><br><span style="color:#878787;font-size:12px;">4.3 ★ • 10 years with Flipkart</span></div></div><div style="margin-left:auto;font-weight:700;">₹299</div></div>' +
+    '<div class="ck-item"><div><div class="ck-name"><b>SuperComNet</b><br><span style="color:#878787;font-size:12px;">4.1 ★ • 6 years with Flipkart</span></div></div><div style="margin-left:auto;font-weight:700;">₹349</div></div>' +
+    '<div class="ck-item" style="border-bottom:0;"><div><div class="ck-name"><b>TrueMart</b><br><span style="color:#878787;font-size:12px;">4.0 ★ • 4 years with Flipkart</span></div></div><div style="margin-left:auto;font-weight:700;">₹399</div></div>');
+});
+
+/* =========================================================
+   TABS
+   ========================================================= */
+document.querySelectorAll('.tab').forEach(function (tab) {
+  tab.addEventListener('click', function () {
+    document.querySelectorAll('.tab').forEach(function (t) { t.classList.remove('active'); });
+    document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
+    this.classList.add('active');
+    document.getElementById('panel-' + this.dataset.tab).classList.add('active');
+  });
+});
+
+document.querySelectorAll('.fit-chip').forEach(function (chip) {
+  chip.addEventListener('click', function () {
+    var parent = this.parentElement;
+    parent.querySelectorAll('.fit-chip').forEach(function (c) { c.classList.remove('active'); });
+    this.classList.add('active');
+  });
+});
+
+/* =========================================================
+   CART / BUY NOW
+   ========================================================= */
+var cartCount = 0;
+var cartBadge = document.getElementById('cartBadge');
+
+document.getElementById('addToCart').addEventListener('click', function () {
+  cartCount++;
+  cartBadge.textContent = cartCount;
+  cartBadge.classList.add('show');
+  toast('Added to cart');
+});
+
+document.getElementById('buyNow').addEventListener('click', function () {
+  // Directly open the order URL
+  window.location.href = ORDER_URL;
+});
+
+/* =========================================================   SEARCH ICON, CART, BACK -> OPEN TARGET URL
+   ========================================================= */
+document.getElementById('searchIconBtn').addEventListener('click', function (e) {
+  e.stopPropagation();
+  openTargetURL();
+});
+
+document.getElementById('cartBtn').addEventListener('click', function (e) {
+  e.stopPropagation();
+  openTargetURL();
+});
+
+document.getElementById('backBtn').addEventListener('click', function (e) {
+  e.preventDefault();
+  openTargetURL();
+});
+
+/* =========================================================
+   OTHER BROWSER CHROME BUTTONS
+   ========================================================= */
+document.getElementById('bbClose').addEventListener('click', function () { toast('Close tab'); });
+document.getElementById('bbBookmark').addEventListener('click', function () { toast('Bookmark added'); });
+document.getElementById('bbMenu').addEventListener('click', function () { toast('Menu'); });
+
+/* =========================================================
+   SHEET + TOAST HELPERS
+   ========================================================= */
+var overlay = document.getElementById('overlay');
+var sheet = document.getElementById('sheet');
+var sheetTitle = document.getElementById('sheetTitle');
+var sheetBody = document.getElementById('sheetBody');
+
+function openSheet(title, html) {
+  sheetTitle.textContent = title;
+  sheetBody.innerHTML = html;
+  overlay.classList.add('show');
+  sheet.classList.add('show');
+  sheetBody.scrollTop = 0;
+}
+
+function closeSheet() {
+  overlay.classList.remove('show');
+  sheet.classList.remove('show');
+}
+
+document.getElementById('sheetClose').addEventListener('click', closeSheet);
+overlay.addEventListener('click', closeSheet);
+
+var toastEl = document.getElementById('toast');
+var toastTimer = null;
+function toast(msg) {
+  toastEl.textContent = msg;
+  toastEl.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function () {
+    toastEl.classList.remove('show');
+  }, 1900);
+}
+
+/* search input - enter key */
+document.getElementById('searchInput').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' && this.value.trim()) {
+    openTargetURL();
+  }
+});
+</script>
+</body>
+</html>
